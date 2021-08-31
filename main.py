@@ -19,7 +19,7 @@ from multiprocessing.pool import ThreadPool as Pool
 
 
 if __name__ == "__main__":
-      '''count=10
+      count=10
       mylist=[]
 
       while(count<=7890):
@@ -70,17 +70,17 @@ if __name__ == "__main__":
 
             count+=100
 
-      #crawlData.crawling(mylist)
+      crawlData.crawling(mylist)
 
       try:
             with open('my_list.json', 'w', encoding="utf-8") as file:
                   json.dump(mylist, file, ensure_ascii=False, indent=4)
       except:
-            pass'''
+            pass
 
 
 
-      '''filename = "my_list.json"
+      filename = "my_list.json"
       file = open(filename, encoding="utf8")
       jsondata = file.read()
       obj = json.loads(jsondata)
@@ -94,7 +94,7 @@ if __name__ == "__main__":
             pool.apply_async(crawlData.crawling,(obj,count,check))
             count+=1
       pool.close()
-      pool.join()'''
+      pool.join()
 
       tree = ET.ElementTree(file="hongkong_consolidated.xml")
       root = tree.getroot()
